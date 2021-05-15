@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://yudhveer-singh.github.io/contacts" />
 
 <meta property="og:description" content="Contribute to Yudhveer-Singh/contacts development by creating an account on GitHub." />
-        <meta name="description" content="null"><meta name="keywords" content="HTML, yudhveer62">
+        
         <title>My contacts</title>
 
         <style>
@@ -31,7 +31,7 @@
         h1{
             text-align:right;
             color: Purple;
-            font-family: Times new roman;
+            
         }
             button {
            border:none;
@@ -42,17 +42,99 @@
            width: 160px;
            margin: 15px 5px 5px 0;
            box-shadow: 0 0 10px 1px #ddd;
-           
+           outline:none;
         
                }
-            
-            
-
+ h1 {
+   color: purple;
+   font-family:verdana;
+   animation-name: drive;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in;
+   animation-direction: normal;
+  }
+    @keyframes drive {
+   from {
+    transform: translateX(70%);
+   }
+   
+  }
+     button:active{
+         background-color:purple;
+         color:#fff;
+}
+     button:hover{
+         background-color:purple;
+         color:#fff;
+}
+#error{
+	display:none;
+}
+#cont{
+	display:none;
+}
+#pas{
+	display:block;
+	text-align: center;
+	margin-top:30%;
+	font-size:18px;
+	font-family: "Times New Roman";
+}
+#pass{
+	border-radius:10px;
+	outline: none;
+	text-align: center;
+	width:80%;
+	height:30px;
+	border:none;
+	box-shadow: 0 0 10px 1px #ddd;
+	font-size:20px;
+}
+#pass:hover{
+	border-style: solid;
+	border-color: purple;
+}
+h2{
+	color: #ff0000;
+}
+code{
+	font-size:12px;
+}
         </style>
 
     </head>
 
-    <body><h1>My contacts</h1> <hr color="Purple">
+    <body>
+    <h1>My contacts</h1> <hr color="Purple">
+    
+    
+    <span id="error">
+    <code><h2>Error!!! </h2>
+    <code>you entered a wrong password<br>
+    Refresh page to try again.
+    </code>
+	</span>
+
+    
+<div class="pas">
+<span id="pas">
+    
+    	Enter password:<br><br>
+    	<input type="password" name="pass" id="pass" placeholder="Tap to enter" ><br>
+		<button onclick="check()">Submit</button><br><br><br>
+<hr color="purple">
+    <code>
+    made with html<br>
+    styled with css<br>
+    protected with js</code>
+</span>
+</div>
+    
+    
+    
+    <span id="cont">
 
         
 
@@ -74,8 +156,26 @@
 
 <a href="tel: +919781744462"><button>Sony Chacha</button></a><br>
 <hr color="purple">
-        
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         </span>
+         
+<script>
+function check(){
+var passw= document.getElementById('pass').value;
+if(passw=="hello"){
+
+document.getElementById('cont').style. display='block';
+ document.getElementById('pas').style. display='none';
+ 
+}
+else{
+	
+	document.getElementById('error').style.display='block';
+document.getElementById('pas').style. display='none';
+
+}
+}
+</script>
+         
     </body>
 
 </html>
