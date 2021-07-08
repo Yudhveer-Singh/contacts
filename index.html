@@ -30,7 +30,6 @@
 
         h1{
             text-align:right;
-            color: Purple;
             
         }
             button {
@@ -39,7 +38,7 @@
            border-radius: 100px;
            font-size: 17px;
            height: 35px;
-           width: 160px;
+           width: 47%;
            margin: 15px 5px 5px 0;
            box-shadow: 2px 2px 2px 1px #999, -1px -1px 2px 1px #eee;
            outline:none;
@@ -74,6 +73,7 @@
 }
 #cont{
 	display:none;
+	float:center;
 }
 #pas{
 	display:block;
@@ -89,40 +89,83 @@
 	width:80%;
 	height:30px;
 	border:none;
-	 box-shadow: 2px 2px 2px 1px #999;
+	box-shadow: 2px 2px 2px 1px #999;
 	font-size:20px;
+	
+	animation-name: vb;
+	animation-duration: 0.1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 4;
+	animation-timing-function: ease-in;
+	animation-direction: normal;
 }
 #pass:hover{
 	border:2px solid purple;
 	box-shadow: none;
 }
-h2{
-	color: #ff0000;
-}
 code{
 	font-size:12px;
 }
-        </style>
+body{
+	margin:0;
+}
+@keyframes vib{
+	0%{
+	transform: transtateX(0px);
+	}
+	25%{
+	transform: translateX(10px);
+	}
+	50%{
+	transform: transtateX(0px);
+	}
+	75%{
+	transform: transtateX(-10px);
+	}
+	100%{
+	transform: transtateX(0px);
+	}
+}
+table{position:absolute;}
+#icon1{
+	height:40px;
+	width:100%;
+}
+</style>
+
+<link rel="stylesheet" href="asistive_touch.css">
 
     </head>
 
-    <body>
-    <h1>My contacts</h1> <hr color="Purple">
+    <body id="body">
+    
+    <table>
+    <tr>
+    <td><button id="three" onclick="eye()"><img src="eye.svg" id="icon1"></button></td>
+    </tr>
+    <tr>
+    <td><button id="five" onclick="asison()"></button></td>
+    <td><button id="six" onclick="dark()"><img src="moon.svg" id="icon2"></button></td>
+    </tr>
+    <tr>
+    
+    <td><button id="nine" onclick="lock()"><img src="lock.svg" id="icon3"></button></td>
+    </tr>
+    
+    </table>
+    
+    <header>
+    	<h1>My contacts</h1> 
+    </header>
+    <hr color="Purple">
     
     
-    <span id="error">
-    <code><h2>Error!!! </h2>
-    <code>you entered a wrong password<br>
-    Refresh page to try again.
-    </code>
-	</span>
-
     
 <div class="pas">
 <span id="pas">
     
     	Enter password:<br><br>
-    	<input type="password" name="pass" id="pass" placeholder="Tap to enter" ><br>
+    	<input type="password" name="pass" id="pass" placeholder="Tap to enter" onclick="initial()"><br><!--pass-->
 		<button onclick="check()">Submit</button><br><br><br>
 <hr color="purple">
     <code>
@@ -156,7 +199,7 @@ code{
 
 	<a href="tel: +919781744462"><button>Sony Chacha</button></a>
 	
-	<a href="tel: 9814553416"><button>Sheenu ma'am</button></a><br>
+	<a href="tel: 9814553416"><button>Sheenu ma'am</button></a><br><br>
 <hr color="purple">
 	
 
@@ -164,23 +207,69 @@ code{
          </span>
          
 <script>
+var ee=0;
+var bdyclr=0;
+
+
+
+
+
 function check(){
 var passw= document.getElementById('pass').value;
-if(passw=="hello"){
+
+
+if(passw=="hello" || passw=="Hello"){
 
 document.getElementById('cont').style. display='block';
- document.getElementById('pas').style. display='none';
+document.getElementById('pas').style. display='none';
  
 }
 else{
-	
-	document.getElementById('error').style.display='block';
-document.getElementById('pas').style. display='none';
+	document.getElementById('pass').style.animationName='vib';
+	document.getElementById('pass').value='';
+	document.getElementById('pass').placeholder='Tap to retry';
+}
+}
+function initial(){
+	document.getElementById('pass').style.animationName='vb';
+}
 
+
+function lock(){
+	document.getElementById('cont').style. display='none';
+	document.getElementById('pas').style. display='block';
+	document.getElementById('pass').value='';
 }
+function eye(){
+	var count=ee%2;
+	var dar=bdyclr%2;
+	if(count==0){
+	document.getElementById('body').style.backgroundColor='#bbcc00';}
+	else{
+		if(dar==0){
+		document.getElementById('body').style.backgroundColor='#000000';
+	}
+		else{
+		document.getElementById('body').style.backgroundColor='#ffffff';}
 }
+	ee++;
+	bdyclr++;
+}
+function dark(){
+var dar=bdyclr%2;
+if(dar==0){
+	document.getElementById('body').style.backgroundColor='#000000';
+	document.getElementById('body').style.filter="invert(100%)";
+}
+else{
+	document.getElementById('body').style.backgroundColor='#ffffff';
+	document.getElementById('body').style.filter="invert(0%)";
+}
+	bdyclr++;
+}
+
 </script>
-         
+<script src="asistive_touch.js"></script>
     </body>
 
 </html>
