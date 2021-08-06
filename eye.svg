@@ -9,8 +9,8 @@
 	enable-background="new 0 0 24.0 24.0"
 	xml:space="preserve">
 	<path
-		fill="#FFFFFF"
-		stroke="#FFFFFF"
+		fill="#000000"
+		stroke="#000000"
 		fill-opacity="0.000"
 		stroke-opacity="1.000"
 		fill-rule="nonzero"
@@ -19,8 +19,8 @@
 		stroke-linecap="square"
 		d="M12.13,9.38C16.81,9.38,20.60,10.99,20.60,12.97C20.60,14.95,16.81,16.55,12.13,16.55C7.45,16.55,3.66,14.95,3.66,12.97C3.66,10.99,7.45,9.38,12.13,9.38z"/>
 	<path
-		fill="#FFFFFF"
-		stroke="#FFFFFF"
+		fill="#000000"
+		stroke="#000000"
 		fill-opacity="0.000"
 		stroke-opacity="1.000"
 		fill-rule="nonzero"
@@ -29,8 +29,8 @@
 		stroke-linecap="square"
 		d="M12.14,4.92L12.13,7.37"/>
 	<path
-		fill="#FFFFFF"
-		stroke="#FFFFFF"
+		fill="#000000"
+		stroke="#000000"
 		fill-opacity="0.000"
 		stroke-opacity="1.000"
 		fill-rule="nonzero"
@@ -39,8 +39,8 @@
 		stroke-linecap="square"
 		d="M19.16,5.14L17.83,7.37"/>
 	<path
-		fill="#FFFFFF"
-		stroke="#FFFFFF"
+		fill="#000000"
+		stroke="#000000"
 		fill-opacity="0.000"
 		stroke-opacity="1.000"
 		fill-rule="nonzero"
@@ -49,8 +49,8 @@
 		stroke-linecap="square"
 		d="M6.01,4.92L7.12,7.37"/>
 	<path
-		fill="#FFFFFF"
-		stroke="#FFFFFF"
+		fill="#000000"
+		stroke="#000000"
 		fill-opacity="0.000"
 		stroke-opacity="1.000"
 		fill-rule="nonzero"
