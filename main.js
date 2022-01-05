@@ -42,4 +42,10 @@ function toast(msg,toast_duration){
         $(".toast").remove();
     },toast_duration);
 }
-toast("Welcome...",3000);
+toast("Welcome...",2000);
+var params = new window.URLSearchParams(window.location.search);
+if(params.get('n')!==null){
+   setTimeout(function(){
+      toast(params.get('n'),2000);
+   },2000);
+}

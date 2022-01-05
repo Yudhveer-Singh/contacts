@@ -6,6 +6,7 @@
 }
 body{
    margin:0;
+   font-family: vardana;
 }
 body .after{
    content: "";
@@ -113,12 +114,12 @@ body .after{
    background: linear-gradient(var(--gray), white);
 }
 .toast{
-   padding: 8px 14px;
+   padding: 12px 14px;
    position: fixed;
    color: white;
    overflow: hidden;
    text-align: center;
-   min-width: 10ch;
+   min-width: 14ch;
    top: 80px;
    right: 16px;
    background: transparent;
@@ -134,7 +135,7 @@ body .after{
 .toast::before{
    content: "";
    width: 200%;
-   height: 260%;
+   height: 284%;
    z-index: -1;
    left:0;
    top:0;
