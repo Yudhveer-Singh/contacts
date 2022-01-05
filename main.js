@@ -44,8 +44,8 @@ function toast(msg,toast_duration){
 }
 toast("Welcome...",2000);
 var params = new window.URLSearchParams(window.location.search);
-if(params.get('n')!==null){
+if(params.get('v')!==null){
    setTimeout(function(){
-      toast(params.get('n'),2000);
+      toast(params.get('v'),2000);
    },2000);
 }
